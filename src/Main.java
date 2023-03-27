@@ -9,8 +9,8 @@ public class Main {
         System.out.println("Sisesta aasta:");
 
         try {
-                int year = scanner.nextInt();
-                while (year != 0) {
+            int year = scanner.nextInt();
+            while (year != 0) {
                 LocalDate goodFriday = calculateGoodFriday(year);
                 DatesService datesService = new DatesService();
                 List<Date> paymentDates = datesService.getDates(year, goodFriday);
@@ -34,8 +34,7 @@ public class Main {
     private static LocalDate calculateGoodFriday(int year) {
         EasterCalculation easterCalculation = new EasterCalculation();
         LocalDate easter = easterCalculation.calculateEaster(year);
-        LocalDate goodFriday = easter.minusDays(2);
-        return goodFriday;
+        return easter.minusDays(2);
     }
 
     private static void printTable(List<Date> paymentDates) {

@@ -1,8 +1,7 @@
 import java.time.LocalDate;
 
 public class EasterCalculation {
-    private Integer month;
-    private Integer day;
+
     public LocalDate calculateEaster(Integer year) {
         int y = year;
         int a = y % 19;
@@ -18,8 +17,6 @@ public class EasterCalculation {
         int r = (2 * e + 2 * j - k - h + m + 32) % 7;
         int month = (h - m + r + 90) / 25;
         int day = (h - m + r + month + 19) % 32;
-        this.month = month;
-        this.day = day;
         LocalDate easter = LocalDate.of(year, month, day);
         return easter;
     }
