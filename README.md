@@ -5,3 +5,7 @@
 3. Change directory to \Payday\out\production\Payday (for example C:\Users\User\Desktop\Payday\out\production\Payday
 4. To run application type: java Main
 5. CSV file will be saved in \Payday\out\production\Payday folder.
+
+
+
+Alternatively. Clone project to IntelliJ or other IDE and run the application.
