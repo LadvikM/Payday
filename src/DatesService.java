@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.format.TextStyle;
@@ -9,7 +8,7 @@ import java.util.Locale;
 
 
 public class DatesService {
-    public List<Date> getDates(Integer year, LocalDate goodFriday) throws IOException {
+    public List<Date> getDates(Integer year, LocalDate goodFriday) {
         List<Date> paymentDates = new ArrayList<>();
         Locale estonianLocale = new Locale("et", "EE");
         Date paymentDate;
